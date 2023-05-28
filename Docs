@@ -5,8 +5,8 @@ This code implements a simple restaurant management system using the Tkinter lib
 
 Modules Used:
 - tkinter: Provides the main functionality for creating the GUI.
-- random: Used for generating random values (not used in the provided code).
-- time: Used for displaying the current time (not used in the provided code).
+- random: Used for generating random values.
+- time: Used for displaying the current time.
 - ttk: Provides themed widgets for Tkinter.
 - messagebox: Used for displaying message boxes.
 
