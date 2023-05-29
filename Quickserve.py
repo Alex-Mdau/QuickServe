@@ -1,15 +1,16 @@
-from tkinter import *
+
 import random
 import time
 from tkinter import ttk
 from tkinter import messagebox
 import sqlite3
 from tkinter import *
+import tkinter as tk
 
 
 
 def system():
-    root = Tk()
+    root = tk.Tk()
     root.geometry("1680x800")
     root.title("Quick Serve System")
 
@@ -215,30 +216,30 @@ def system():
     def add():
         Database()
         orders = orderno.get()
-        Shawarmas = Shawarma.get()
-        ShawarmaFries = ShawarmaFries.get()
-        FivePcsWings = FivePcsWings.get()
-        FivePcswithFriess = FivePcswithFries.get()
-        FriedChicken = FriedChicken.get()
-        MarylandChickenBiryani = MarylandChickenBiryani.get()
-        ChickenBiryani = ChickenBiryani.get()
-        Choma = Choma.get()
-        MasalaChips = MasalaChips.get()
-        Soda = Soda.get()
-        FreshJuice = FreshJuice.get()
-        Cocktails = Cocktails.get()
-        Mocktails = Mocktails.get()
-        Milkshakes = Milkshakes.get()
+        sh = Shawarma.get()
+        shf = ShawarmaFries.get()
+        w = FivePcsWings.get()
+        fpf = FivePcswithFries.get()
+        fc = FriedChicken.get()
+        mcb = MarylandChickenBiryani.get()
+        cb = ChickenBiryani.get()
+        c = Choma.get()
+        mc = MasalaChips.get()
+        s = Soda.get()
+        fj = FreshJuice.get()
+        ctl = Cocktails.get()
+        mo = Mocktails.get()
+        mi = Milkshake.get()
         costs = cost.get()
         subtotals = subtotal.get()
         taxs = tax.get()
         totals = total.get()
-        if orders == "" or Shawarmas == "" or ShawarmaFries == "" or FivePcsWings == "" or FivePcswithFriess == "" or FriedChicken == "" or MarylandChickenBiryani == "" or ChickenBiryani == "" or Choma == "" or MasalaChips == "" or Soda == "" or FreshJuice == "" or Cocktails == "" or Mocktails == "" or Milkshakes == "" or costs == "" or subtotals == "" or taxs == "" or totals == "":
+        if orders == "" or sh == "" or shf == "" or w == "" or fpf == "" or fc == "" or mcb == "" or cb == "" or c == "" or mc == "" or s == "" or fj == "" or ctl == "" or mo == "" or mi == "" or costs == "" or subtotals == "" or taxs == "" or totals == "":
             messagebox.showinfo("Warning", "Please fill the empty field!!!")
         else:
             connectn.execute(
                 'INSERT INTO Restaurantrecords (ordno, sh, shf , w ,fpf , fc, mcb, cb, c, mc, s, fj, ctl, mo, mi, ct ,sb ,tax, tot) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                (orders, Shawarmas, ShawarmaFries, FivePcsWings, FivePcswithFriess, FriedChicken, MarylandChickenBiryani, ChickenBiryani, Choma, MasalaChips, Soda, FreshJuice, Cocktails, Mocktails, Milkshakes, costs, subtotals, taxs, totals));
+                (orders, sh, shf, w, fpf, fc, mcb, cb, c, mc, s, fj, ctl, mo, mi, costs, subtotals, taxs, totals))
             connectn.commit()
             messagebox.showinfo("Message", "Stored successfully")
         # refresh table data
@@ -356,7 +357,7 @@ def system():
     moinktxt = Entry(leftframe, font=('Poppins', 12, 'bold'), bd=2, insertwidth=4, justify='right',
                      textvariable=Mocktails).grid(row=10, column=2)
     # Milkshake
-    miinklbl = Label(leftframe, font=('Poppins', 12, 'bold'), text="Milkshakes", fg="black", bd=5, anchor=W).grid(row=11,
+    miinklbl = Label(leftframe, font=('Poppins', 12, 'bold'), text="Milkshake", fg="black", bd=5, anchor=W).grid(row=11,
                                                                                                             column=1)
     miinktxt = Entry(leftframe, font=('Poppins', 12, 'bold'), bd=2, insertwidth=4, justify='right',
                      textvariable=Milkshake).grid(row=12, column=1)
