@@ -1,4 +1,5 @@
 # QuickServe
+#https://quickservesystem.github.io/
 
 Managing a fast-food restaurant can be a difficult task, but with the right tools, it can be much easier. Quick Serve is a software solution that can help fast-food restaurant owners and managers with tasks like inventory management, order processing, and sales tracking.
 The system is user-friendly and can be tailored to the specific requirements of various fast-food restaurants. Fast-food restaurant owners can use this system to save time, reduce waste, and make informed decisions that can lead to increased profits.
